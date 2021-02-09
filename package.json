@@ -20,8 +20,20 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "prettier"
+    ],
+    "rules": {
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo 'hello'"
+    }
   },
   "browserslist": {
     "production": [
@@ -34,5 +46,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^7.2.0",
+    "husky": "^5.0.9",
+    "prettier": "^2.2.1"
   }
 }
